@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Insert array element values and the result of a callback function into a format string and print the result.
+> Insert array element values and the result of a callback function into a [format string][@stdlib/string/format] and print the result.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -45,43 +45,37 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/console-log-each-map
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-logEachMap = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var logEachMap = require( 'path/to/vendor/umd/console-log-each-map/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.logEachMap;
-})();
-</script>
+var logEachMap = require( '@stdlib/console-log-each-map' );
 ```
 
 #### logEachMap( str\[, ...args], clbk\[, thisArg] )
 
-Inserts array element values and the result of a callback function into a format string and prints the result.
+Inserts array element values and the result of a callback function into a [format string][@stdlib/string/format] and prints the result.
 
 ```javascript
 function add( a, b ) {
@@ -134,10 +128,10 @@ function multiply( x, y ) {
 }
 
 var x = [ 1, 2, 3 ];
-var y = 2;
+var y = 0.5;
 
-logEachMap( '%d * %d = %d', x, y, multiply );
-// e.g., => '1 * 2 = 2\n2 * 2 = 4\n3 * 2 = 6\n'
+logEachMap( '%0.1f * %0.1f = %0.1f', x, y, multiply );
+// e.g., => '1.0 * 0.5 = 0.5\n2.0 * 0.5 = 1.0\n3.0 * 0.5 = 1.5\n'
 ```
 
 The callback function is provided the following arguments:
@@ -175,14 +169,9 @@ The number of `argX` arguments is determined according to the number of provided
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
 
 function add( x, y ) {
     return x + y;
@@ -196,11 +185,6 @@ var y = discreteUniform( 10, -50, 50, {
 });
 
 logEachMap( '%d + %d = %d', x, y, add );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -295,9 +279,11 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/console-log-each-map/main/LICENSE
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/umd
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+
+[@stdlib/string/format]: https://github.com/stdlib-js/string-format
 
 </section>
 
