@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Insert array element values and the result of a callback function into a format string and print the result.
+> Insert array element values and the result of a callback function into a [format string][@stdlib/string/format] and print the result.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -75,7 +75,7 @@ var logEachMap = require( '@stdlib/console-log-each-map' );
 
 #### logEachMap( str\[, ...args], clbk\[, thisArg] )
 
-Inserts array element values and the result of a callback function into a format string and prints the result.
+Inserts array element values and the result of a callback function into a [format string][@stdlib/string/format] and prints the result.
 
 ```javascript
 function add( a, b ) {
@@ -128,10 +128,10 @@ function multiply( x, y ) {
 }
 
 var x = [ 1, 2, 3 ];
-var y = 2;
+var y = 0.5;
 
-logEachMap( '%d * %d = %d', x, y, multiply );
-// e.g., => '1 * 2 = 2\n2 * 2 = 4\n3 * 2 = 6\n'
+logEachMap( '%0.1f * %0.1f = %0.1f', x, y, multiply );
+// e.g., => '1.0 * 0.5 = 0.5\n2.0 * 0.5 = 1.0\n3.0 * 0.5 = 1.5\n'
 ```
 
 The callback function is provided the following arguments:
@@ -282,6 +282,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 [@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+
+[@stdlib/string/format]: https://github.com/stdlib-js/string-format
 
 </section>
 
