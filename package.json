@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/console-log-each-map",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Insert array element values and the result of a callback function into a format string and print the result.",
   "license": "Apache-2.0",
   "author": {
