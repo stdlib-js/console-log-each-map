@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@v0.1.0-deno/mod.js';
 ```
 
 #### logEachMap( str\[, ...args], clbk\[, thisArg] )
@@ -153,7 +153,7 @@ The number of `argX` arguments is determined according to the number of provided
 
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@v0.1.0-deno/mod.js';
 
 function add( x, y ) {
     return x + y;
