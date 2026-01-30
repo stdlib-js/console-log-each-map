@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/console-log-each-map/tags). For example,
+
+```javascript
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@v0.1.0-esm/index.mjs';
 ```
 
@@ -158,7 +163,7 @@ The number of `argX` arguments is determined according to the number of provided
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@v0.1.0-esm/index.mjs';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
 
 function add( x, y ) {
     return x + y;
