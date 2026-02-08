@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@v0.1.1-esm/index.mjs';
 ```
 
 #### logEachMap( str\[, ...args], clbk\[, thisArg] )
@@ -158,7 +158,7 @@ The number of `argX` arguments is determined according to the number of provided
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@v0.1.1-esm/index.mjs';
 
 function add( x, y ) {
     return x + y;
